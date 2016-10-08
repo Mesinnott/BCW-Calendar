@@ -26,8 +26,10 @@ function buildCalendar(){
         // editable: true,
         // theme: true,
 
-        dayClick: function () {
-            alert('YOU MADE MY DAY!!!');
+        dayClick: function (a,b,c,d,e) {
+            debugger
+            prompt('event?', 'event')
+            // alert('YOU MADE MY DAY!!!');
         }
     })
 
