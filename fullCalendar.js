@@ -23,7 +23,7 @@ function buildCalendar(){
             debugger
             
         },
-        // editable: true,
+        editable: true,
         // theme: true,
 
         dayClick: function (a,b,c) {
@@ -36,8 +36,20 @@ function buildCalendar(){
             var timeString= JSON.stringify(timeStamp)
             $('#eventTime').val(timeStamp)
          
-        }
+
+        },
+
+            eventClick: function(event){
+                $('#myCalendar').fullCalendar('removeEvents', event._id);
+            }
+
+    
         
+    
+
+
+
+
     })
 
 return theCalendar;
