@@ -97,6 +97,13 @@ function EventService() {
         } else {
             eventList = defaultEventList;
         }
+        var events = eventList.filter(event, function oneMonth() {
+            if (moment().diff(event.start, 'days') > 30) {
+                return false;
+            }else{
+                return true;
+            }
+        })
         return eventList;
     }
 
