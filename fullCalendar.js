@@ -1,8 +1,8 @@
-$(document).ready(function() {
+function buildCalendar(){
 
-    $('#calendar').fullCalendar({
+    var theCalendar = $('#calendar').fullCalendar({
         // put your options and callbacks here
-        header:{ center: 'month,agendaWeek,agendaDay, listWeek'},
+        header: { center: 'month,agendaWeek,agendaDay, listWeek' },
 
 
         weekends: true,
@@ -10,22 +10,27 @@ $(document).ready(function() {
         businessHours: true,
         navLinks: true,
         selectable: true,
-        buttonText:{
+        buttonText: {
             today: 'Today',
             month: 'Month',
-            week:'Week',
-            day:'Day',
+            week: 'Week',
+            day: 'Day',
             list: 'This Week\'s Tasks'
         },
         droppable: true,
+        draggable: true,
+        eventDrop: function(e,delta,revert){
+            debugger
+            
+        },
+        // editable: true,
         // theme: true,
 
-        dayClick: function(){
+        dayClick: function () {
             alert('YOU MADE MY DAY!!!');
-        },
-        
-        
+        }
     })
 
-});
+return theCalendar;
 
+}

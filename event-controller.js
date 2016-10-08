@@ -1,20 +1,29 @@
-function EventController() {
-    var eventService = new EventService();
+function EventController(theCalendar, eventService) {
 
 
     ///Add events
-    $(((((form))))).on('submit', function createEvent(title, owner, type, timeA, timeB, place, description, filled, reservable) {
-        event.preventDefault();
-        var form = event.target;
-        //get elements from input form and pass them in in order
-        //owner comes from email of user
-        eventService.addEvent(title, owner, type, timeA, timeB, place, description, filled, reservable);
-    })
-    
-    
+    // $(((((form))))).on('submit', function createEvent(title, owner, type, timeA, timeB, place, description, filled, reservable) {
+    //     event.preventDefault();
+    //     var form = event.target;
+    //     //get elements from input form and pass them in in order
+    //     //owner comes from email of user
+    //     eventService.addEvent(title, owner, type, timeA, timeB, place, description, filled, reservable);
+    // })
+
+    update(eventService.getEvents())
+
+    function update(arr){
+        // Renders each event in the arr
+        arr.forEach(function(event){
+            event.editable = true
+            theCalendar.fullCalendar('renderEvent', event)
+        })
+    }
+
+
 
     ///Edit event (need authentication)
-    this.editEvent = function(id, user) {
+    this.editEvent = function (id, user) {
         var event = eventService.findEventById(id);
         if (authenticate(event, user)) {
             //function here
@@ -27,6 +36,12 @@ function EventController() {
 
 
     ///Delete event (need authentication)
+    this.removeEvent = function (id, user) {
+        var event = eventService.findEventById(id);
+        if (authenticate(event, user)) {
+            $('#calendar').fullCalendar('removeEvents', id)
+        }
+    }
 
 
 
@@ -47,17 +62,16 @@ function EventController() {
 
 
     ///Authentication function
-    var authenticate = function(event, user) {
+    var authenticate = function (event, user) {
         if (event.user == user) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
 
 }
 
-EventController();
 
 //display interaction; listeners, etc.
 
