@@ -53,6 +53,7 @@ function EventController(theCalendar, eventService) {
             }
             theCalendar.fullCalendar('renderEvent', event, 'stick')
         })
+        
     }
 
 

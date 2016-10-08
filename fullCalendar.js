@@ -37,6 +37,7 @@ function buildCalendar(){
             $('#eventTime').val(timeStamp)
          
         }
+        
     })
 
 return theCalendar;
