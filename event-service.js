@@ -1,57 +1,71 @@
-function EventService(){
-/**FUNCTIONS TO WRITE:
- * add
- * edit
- * delete
- * dropOff
- * reserve
- */
+function EventService() {
+    /**FUNCTIONS TO WRITE:
+     * add
+     * edit
+     * delete
+     * dropOff
+     * reserve
+     */
+    var idCounter = 0;
 
-function Event(owner, type, date, time, place){
-    this.owner = owner,
-    this.type = type,
-    this.date = date,
-    this.time = time,
-    this.place = place
+    ///CONSTRUCTOR///
+    function Event(title, owner, type, timeA, timeB, place, description, id, filled, reservable) {
+        this.title = title
+        this.owner = user.email,
+            this.type = type,
+            this.start = timeA,
+            this.end = timeB,
+            this.place = place,
+            this.description = "",
+            this.id = id,
+            this.filled = filled,
+            this.reservable = reservable
+    }
 
-}
+    ///ADD EVENT///
+    this.addEvent = function () {
+        //to be called by a function in the event controller, 
+        //all information passed in from there.
+        // title = 
+        // owner =
+        // type =
+        // start =
+        // end =
+        // place =
+        // description = 
+        var id = idCounter;
+        // filled = 
+        // reservable =
+        var event = new Event(title, owner, type, timeA, timeB, place, description, id, filled, reservable)
+        EventList.push(event);
+        idCounter++;
+    }
 
-this.createEvent = function(){
-    owner =
-    type =
-    date =
-    time =
-    place =
-    var event = new Event(owner, type, date, time, place)
-    eventList.push(event)
-}
+    ///EDIT EVENT///
+    this.editEvent = function (event) {
 
-this.createReservableEvent = function(){
-    
-}
-
-this.editEvent = function(event){
-
-}
-
-
-
-
-
-
-//reserve events
-this.reserveEvent = function(event){
-
-}
-
-
-
-
-//availability
+    }
 
 
 
 
+
+
+
+    ///reserve events
+    this.reserveEvent = function (event) {
+
+    }
+
+
+
+
+    //availability
+
+
+
+
+    ///DROP OFF CALENDAR///
 
 
 
