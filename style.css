@@ -1,9 +1,12 @@
 body{
     font-family: 'Roboto', sans-serif;
+    background-image: url('pictures/bcw-cool.png');
+    background-attachment: fixed;
+    background-size: cover;
 }
 .titleBar{
-background:rgba(00,00,00, 0.7);
-background-image: url('pictures/bcw-cool.png');
+/*background:rgba(00,00,00, 0.7);*/
+/*background-image: url('pictures/bcw-cool.png');*/
 display: flex;
 justify-content: center;
 background-attachment: fixed;
@@ -19,7 +22,9 @@ height: 300px;
     /*display:flex;
     justify-content: center;
     width: 50%;*/
-    background-color: rgba(31, 148, 226, 1);
+    background-color: rgba(31, 148, 226, .7);
+    border: 4px solid darkblue;
+    border-radius: 10px;
     /*background-color: transparent*/
     /*background-color: deepskyblu*/
 
@@ -48,8 +53,6 @@ height: 300px;
     justify-content: flex-end;
 }
 .eventForm{
-    background-image: url('pictures/bcw-cool.png');
-    background-attachment: fixed;
     border: 4px solid darkblue;
     border-radius: 10px;
     padding: 15px;
@@ -74,4 +77,12 @@ height: 300px;
 .myNav{
     font-size: 20px;
     text-shadow: 1px 0.5px black;
+}
+.formRow{
+  /*background-image: url('pictures/bcw-cool.png');*/
+    background-attachment: fixed;
+    background-position: bottom;
+}
+.clear{
+    background-color: rgba(31, 148, 226, 0);
 }
