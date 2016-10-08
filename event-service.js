@@ -7,6 +7,8 @@ function EventService() {
      * reserve
      */
     var eventList
+
+
     this.loadEvents = function(){
         loadEvents()}
 
@@ -16,10 +18,15 @@ this.saveEvents = function(){
 
     this.getEvents = function () {
         return eventList;
+
     }
 
 
-    var idCounter = 0;
+    this.random = function() {
+    var idCounter= Math.floor(Math.random()*1000000) 
+    return idCounter
+    }
+
 
     ///CONSTRUCTOR///
     function Event(title, owner, type, timeA, timeB, place, description, id, filled, reservable) {
@@ -60,12 +67,13 @@ this.saveEvents = function(){
         // end =
         // place =
         // description = 
-        var id = idCounter;
+        var id= this.random();
+        // var id = idCounter;
         // filled = 
         // reservable =
         var event = new Event(title, owner, type, timeA, timeB, place, description, id, filled, reservable)
         eventList.push(event);
-        idCounter++;
+        // idCounter++;
     }
 
     ///EDIT EVENT///
