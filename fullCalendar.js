@@ -9,6 +9,14 @@ $(document).ready(function() {
         weekNumbers: true,
         businessHours: true,
         navLinks: true,
+        selectable: true,
+        buttonText:{
+            today: 'Today',
+            month: 'Month',
+            week:'Week',
+            day:'Day',
+            list: 'This Weeks Tasks'
+        }
         
     })
 
