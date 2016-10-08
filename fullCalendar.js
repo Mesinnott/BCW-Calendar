@@ -38,9 +38,11 @@ function buildCalendar(){
          
         },
 
-            eventClick: function(event){
-                $('#myCalendar').fullCalendar('removeEvents', event._id);
-            }
+    //      eventClick: function(calEvent, jsEvent, view) {
+    // $('#calendar').fullCalendar('removeEvents', function (event) {
+    //     return event == calEvent;
+    // });
+// }             ***************This will delete one event.  BUT, still not saving on refresh**************
 
     
         
