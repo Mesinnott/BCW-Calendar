@@ -10,6 +10,9 @@ function EventService() {
     this.loadEvents = function(){
         loadEvents()}
 
+this.saveEvents = function(){
+        saveEvents()}
+
 
     this.getEvents = function () {
         return eventList;
@@ -21,7 +24,7 @@ function EventService() {
     ///CONSTRUCTOR///
     function Event(title, owner, type, timeA, timeB, place, description, id, filled, reservable) {
         this.title = title
-        this.owner = currentUser,
+        this.owner = main.currentUser,
             this.type = type,
             this.start = timeA,
             this.end = timeB,
@@ -43,8 +46,11 @@ function EventService() {
     }
 
 
+    
+
+
     ///ADD EVENT///
-    this.addEvent = function () {
+    this.addEvent = function (title, owner, type, timeA, timeB, place, description, id, filled, reservable) {
         //to be called by a function in the event controller, 
         //all information passed in from there.
         // title = 

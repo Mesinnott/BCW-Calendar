@@ -50,7 +50,7 @@
                     <div class='form-inline'>
                         <div class='form-group'>
                             <label for="eventTitle">Event Title</label>
-                            <input type='text' required class='form-control' name='eventTitle' placeholder='Hack-a-thon 3000!'>
+                            <input type='text' required class='form-control' id='eventTitle' name='eventTitle' placeholder='Hack-a-thon 3000!'>
                         </div>
                         <div class='form-group'>
                             <label for="eventTime">When We Doing This?</label>
@@ -58,26 +58,26 @@
                         </div>
                         <div class='form-group'>
                             <label for="eventLocation">Where We Doing This?</label>
-                            <input type='text' required class='form-control' name='eventLocation' placeholder="Jake's House">
+                            <input type='text' required class='form-control' id='eventLocation' placeholder="Jake's House">
                         </div>
                     </div>
                     <div class='form-group'>
                         <label for="eventDescription">What We Doing?</label>
-                        <textarea class='form-control' required rows='3' name='eventDescription' placeholder="Let's all head to Jake's house and hold a raging 'coding' session where we stay up late and drink 'mountain dew'!!   ;)"></textarea>
+                        <textarea class='form-control' required rows='3' id='eventDescription' placeholder="Let's all head to Jake's house and hold a raging 'coding' session where we stay up late and drink 'mountain dew'!!   ;)"></textarea>
                     </div>
                     <div class='form-inline bottomRow'>
                         <div class='form-group dropup'>
-                            <select class='form-control dropup show-tick' required>       
-                        <option name='publicMeet'>Meet Ups and Pubs</option>
-                        <option name='tutoring'>TA Adventure Time</option>
-                        <option name='groupStudy'>'Study' Groups</option>
-                        <option name='interviewCalls'>Call me Maybe?</option>
+                            <select class='form-control dropup show-tick' id='formType' required>       
+                        <option name='publicMeet' id='eventType'>Meet Ups and Pubs</option>
+                        <option name='tutoring' id='eventType'>TA Adventure Time</option>
+                        <option name='groupStudy' id='eventType'>'Study' Groups</option>
+                        <option name='interviewCalls' id='eventType'>Call me Maybe?</option>
                             </select>
                         </div>
                         <div class='form-group'>
-                            <div class='checkbox' name='eventPrivacy'>
+                            <div class='checkbox'>
                                 <label>
-                        <input type="checkbox">Reservation Required?
+                        <input type="checkbox" value='true' id='eventPrivacy'>Reservation Required?
                         </label>
                             </div>
                         </div>

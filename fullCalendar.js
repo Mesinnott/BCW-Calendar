@@ -29,12 +29,13 @@ function buildCalendar(){
         dayClick: function (a,b,c) {
             debugger
             var timeStamp = a._d
+            
             // document.getElementById('#')
             $('#addEvent').removeClass('hidden')
             console.log(a._d)
-            $('#eventTime').val = (a._d)
-            // prompt('event?', 'event')
-            // alert('YOU MADE MY DAY!!!');
+            var timeString= JSON.stringify(timeStamp)
+            $('#eventTime').val(timeStamp)
+         
         }
     })
 
