@@ -4,6 +4,8 @@ function EventController() {
 
     ///Add events
     $(((((form))))).on('submit', function createEvent(title, owner, type, timeA, timeB, place, description, filled, reservable) {
+        event.preventDefault();
+        var form = event.target;
         //get elements from input form and pass them in in order
         //owner comes from email of user
         eventService.addEvent(title, owner, type, timeA, timeB, place, description, filled, reservable);
