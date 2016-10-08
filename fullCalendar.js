@@ -36,6 +36,7 @@ function buildCalendar(){
             var timeString= JSON.stringify(timeStamp)
             $('#eventTime').val(timeStamp)
          
+
         },
 
     //      eventClick: function(calEvent, jsEvent, view) {
@@ -47,6 +48,7 @@ function buildCalendar(){
     
         
     
+
 
 
 
