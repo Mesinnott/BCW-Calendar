@@ -7,38 +7,6 @@ function EventService() {
      * reserve
      */
 
-    var eventList = [
-        {
-            "title": "Dinner at Guido\'s",
-            "place": "${Guido address}",
-            "start": moment('2016-10-07'), //fix formatting
-            "owner": 'user.email',
-            "description": "Come have dinner with BCW!",
-            "filled": false,
-            "reservable": false,
-            "type": "meetup"
-        },
-        {
-            "title": "BCW Hackathon",
-            "place": "Garden City Office",
-            "start": moment('2016-10-07'), //fix formatting
-            "owner": 'user.email',
-            "description": "Come code with BCW!",
-            "filled": true,
-            "reservable": false,
-            "type": "meetup"
-        }
-        // {
-        // id
-        // time 
-        // place 
-        // filled (boolean)
-        // description
-        // owner
-        // reservable (boolean)
-        // type (use as class)
-        // }
-    ]
 
     this.getEvents = function(){
         return eventList
@@ -50,7 +18,7 @@ function EventService() {
     ///CONSTRUCTOR///
     function Event(title, owner, type, timeA, timeB, place, description, id, filled, reservable) {
         this.title = title
-        this.owner = user.email,
+        this.owner = currentUser,
             this.type = type,
             this.start = timeA,
             this.end = timeB,
@@ -121,6 +89,38 @@ function EventService() {
 
 
 
+    var eventList = [
+        {
+            "title": "Dinner at Guido\'s",
+            "place": "${Guido address}",
+            "start": moment('2016-10-07'), //fix formatting
+            "owner": 'luke.skywalker@lightside.jed',
+            "description": "Come have dinner with BCW!",
+            "filled": false,
+            "reservable": false,
+            "type": "meetup"
+        },
+        {
+            "title": "BCW Hackathon",
+            "place": "Garden City Office",
+            "start": moment('2016-10-07'), //fix formatting
+            "owner": 'luke.skywalker@lightside.jed',
+            "description": "Come code with BCW!",
+            "filled": true,
+            "reservable": false,
+            "type": "meetup"
+        }
+        // {
+        // id
+        // time 
+        // place 
+        // filled (boolean)
+        // description
+        // owner
+        // reservable (boolean)
+        // type (use as class)
+        // }
+    ]
 
 
 }

@@ -23,9 +23,9 @@ function EventController(theCalendar, eventService) {
 
 
     ///Edit event (need authentication)
-    this.editEvent = function (id, user) {
+    this.editEvent = function (id, currentUser) {
         var event = eventService.findEventById(id);
-        if (authenticate(event, user)) {
+        if (authenticate(event, currentUser)) {
             //function here
 
 
@@ -36,9 +36,9 @@ function EventController(theCalendar, eventService) {
 
 
     ///Delete event (need authentication)
-    this.removeEvent = function (id, user) {
+    this.removeEvent = function (id, currentUser) {
         var event = eventService.findEventById(id);
-        if (authenticate(event, user)) {
+        if (authenticate(event, currentUser)) {
             $('#calendar').fullCalendar('removeEvents', id)
         }
     }
@@ -62,8 +62,8 @@ function EventController(theCalendar, eventService) {
 
 
     ///Authentication function
-    var authenticate = function (event, user) {
-        if (event.user == user) {
+    var authenticate = function (event, currentUser) {
+        if (event.user == currentUser) {
             return true;
         } else {
             return false;

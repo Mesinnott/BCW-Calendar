@@ -1,5 +1,5 @@
 function main(){
-
+    var currentUser = "luke.skywalker@lightside.jed"
     var theCalendar = buildCalendar();
     var app = {
         services: {
@@ -9,6 +9,6 @@ function main(){
 
 
     EventController(theCalendar, app.services.eventService)
-    
+
 }
 main()
