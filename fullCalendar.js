@@ -18,6 +18,7 @@ $(document).ready(function() {
             list: 'This Week\'s Tasks'
         },
         droppable: true,
+        // theme: true,
 
         dayClick: function(){
             alert('YOU MADE MY DAY!!!');

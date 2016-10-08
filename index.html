@@ -4,32 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="node_modules/fullcalendar/dist/fullcalendar.css"/>
+    <link rel="stylesheet" href="node_modules/fullcalendar/dist/fullcalendar.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <script src='node_modules/jquery/dist/jquery.min.js'></script>
     <script src='node_modules/moment/min/moment.min.js'></script>
     <script src='node_modules/fullcalendar/dist/fullcalendar.js'></script>
-    <script src= 'calendar-service.js'></script>
-    <script src= 'fullCalendar.js'></script>
+    <script src='fullCalendar.js'></script>
+
     <title>Boise Code Works Calendar</title>
 </head>
+
 <body>
-    <title class = 'lead'>
+    <span class='lead'>
         <button>Sign In</button>
         <button>New Event</button>
         <button>Calendar</button>
 
-    </title>
-    <div class= 'container-fluid'>
-        <div class= 'row titleBar'>
-            <img src="pictures/BCW.png" alt="BCW">
+    </span>
+    <div class='container-fluid'>
+        <div class='row titleBar'>
+            <img class='img' src="pictures/BCW.png" alt="BCW">
         </div>
 
 
+
+        <div class='row calendar'>
+            <div class='col-xs-1'></div>
+            <div class='col-xs-10' class='calendar' id='calendar'></div>
+            <div class='col-xs-1'></div>
+        </div>
     </div>
-
-
-<div id ='calendar'></div>
-
-    
+    <script src='events.js'></script>
+    <script src='event-service.js'></script>
+    <script src='event-controller.js'></script>
 </body>
+
 </html>
