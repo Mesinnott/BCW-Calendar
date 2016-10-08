@@ -17,7 +17,10 @@
     <nav class='navbar transparent navbar-fixed-top'> 
         <div class='container-fluid'>
             <div class='navbar-header brand'> 
-                <h4 class='bcw'><a href='boisecodeworks.com'>hi</a> Boise Code Works Official Calendar of Awesomeness</h4>
+                <div class='bcw'>
+                <a href='boisecodeworks.com'><img class = 'bcwIcon' src='pictures/bcwicon.png'></a>
+                <h4 class='bcwName'> Boise Code Works Official Calendar of Coolness</h4>
+                </div>
                 </div>
                 <ul class = 'nav navbar-nav navbar-right'>
                     <li><a href ='#calendar'>Calendar</a></li>
@@ -29,15 +32,54 @@
 
     
     <div class='container-fluid'>
-        <div class='row titleBar'> <!--/this is the background title screen stuff*-->
+        <div class='row titleBar'> 
         </div>
-        <div class='row calendar' id='calendar'>
-            <div class='col-xs-1'></div>
-            <div class='col-xs-10 calendar' id='calendar'></div>
-            <div class='col-xs-1'></div>
+        <div class='row calendar'>
+            <div class='col-xs-10 col-xs-offset-1 calendar' id='calendar'></div>
         </div>
         <div id='logIn'></div>
-        <div id='addEvent'></div>
+        <div id='addEvent'>
+            <div class="row">
+            <form class = 'eventForm col-xs-10 col-xs-offset-1'>
+                <div class='form-inline bottomRow'>
+                <div class='form-group'>
+                    <label for="eventTitle">Event Title</label>
+                    <input type='text' required class='form-control' id='eventTitle' placeholder='Hack-a-thon 3000!'>
+                </div>
+                <div class='form-group'>
+                    <label for="eventTime">When We Doing This?</label>
+                    <input type='text' required class='form-control' id='eventTime' placeholder='Jan 1, 1999 10:00am - 3:00am'>
+                </div>
+                <div class='form-group'>
+                    <label for="eventPlace">Where We Doing This?</label>
+                    <input type='text' required class='form-control' id='eventTitle' placeholder="Jake's House">
+                </div>
+                </div>
+                <div class='form-group'>
+                    <label for="eventDescription">What We Doing?</label>
+                    <textarea class='form-control'required rows='3' id='eventDescription' placeholder="Let's all head to Jake's house and hold a raging 'coding' session where we stay up late and drink 'mountain dew'!! ;)"></textarea>
+                </div>
+                <div class='form-inline bottomRow'>
+                <div class='form-group'>
+                    <select class ='form-control' required>
+                        <option id='publicMeet'>Meet Ups and Pubs</option>
+                        <option id='tutoring'>TA Adventure Time</option>
+                        <option id='groupStudy'>'Study' Groups</option>
+                        <option id='interviewCalls'>Call me Maybe?</option>
+                            </select>
+                </div>
+                <div class='form-group'>
+                    <div class='checkbox' id='eventPrivacy'>
+                    <label>
+                        <input type="checkbox">Reservation Required?
+                        </label>
+                    </div>
+                </div> 
+                <button type='submit' class='btn btn-primary'>Schedule This Business!</button> 
+                </div>  
+            </form>
+            </div>
+        </div>
     </div>
     <script src='events.js'></script>
     <script src='event-service.js'></script>
