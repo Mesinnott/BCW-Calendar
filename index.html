@@ -17,9 +17,11 @@
 <body>
     <nav class='navbar transparent navbar-fixed-top'> 
         <div class='container'>
-        <button>Sign In</button>
-        <button>New Event</button>
-        <button>Calendar</button>
+        <input type="button" onClick="document.getElementById('middle').scrollIntoView();" />
+        <input type="button" onClick="document.getElementById('end').scrollIntoView();" />
+        <button class = 'singInButton'>Sign In</button>
+        <button class = 'eventButton'>New Event</button>
+        <button class = 'calendarButton'>Calendar</button>
         </div>
         </nav>
 
@@ -28,14 +30,12 @@
         <div class='row titleBar'>
         
         </div>
-
-
-
-        <div class='row calendar'>
+        <div class='row calendar' id='middle'>
             <div class='col-xs-1'></div>
             <div class='col-xs-10' class='calendar' id='calendar'></div>
             <div class='col-xs-1'></div>
         </div>
+        <div id='end'></div>
     </div>
     <script src='events.js'></script>
     <script src='event-service.js'></script>
