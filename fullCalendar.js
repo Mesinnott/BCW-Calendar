@@ -20,7 +20,7 @@ $(document).ready(function() {
         droppable: true,
 
         dayClick: function(){
-            alert('YOU PRESSED MY DAY!!!');
+            alert('YOU MADE MY DAY!!!');
         },
         
         
