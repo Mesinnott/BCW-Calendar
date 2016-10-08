@@ -40,6 +40,8 @@ function EventController(theCalendar, eventService) {
          
         $('#addEvent').addClass('hidden')
 
+        location.reload()
+
     })
 
 
