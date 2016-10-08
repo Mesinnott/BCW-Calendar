@@ -9,7 +9,7 @@ function EventService() {
 
 
     this.getEvents = function(){
-        return loadEvents()
+        return _eventList;
     }
 
 
@@ -31,6 +31,7 @@ function EventService() {
 
     ///FIND EVENTS///
     this.findEventById = function (id) {
+        var eventList = getEvents();
         for (var i = 0; i < eventList.length; i++) {
             if (eventList[i].id == id) {
                 return eventList[i];
@@ -106,6 +107,7 @@ function EventService() {
         })
         return eventList;
     }
+    var _eventList = loadEvents();
 
 
     var defaultEventList = [
