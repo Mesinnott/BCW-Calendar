@@ -1,6 +1,6 @@
 .titleBar{
 background:rgba(00,00,00, 0.7);
-background-image: url('pictures/nightLife.jpg');
+background-image: url('pictures/bcw-cool.png');
 display: flex;
 justify-content: center;
 background-attachment: fixed;
@@ -16,8 +16,9 @@ height: 300px;
     /*display:flex;
     justify-content: center;
     width: 50%;*/
-    /*background-color: rgba(00, 00, 00, 0.2);*/
-    background-color: transparent
+    background-color: rgba(31, 148, 226, 1);
+    /*background-color: transparent*/
+    /*background-color: deepskyblu*/
 
 }
 .img{
