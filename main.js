@@ -6,7 +6,7 @@ function main(){
             eventService: new EventService()
         }
     }
-
+    app.services.eventService.loadEvents();
 
     EventController(theCalendar, app.services.eventService)
 

@@ -86,15 +86,27 @@ function EventService() {
 
 
 
+    ///SAVE EVENTS///
+    function saveEvents() {
+        localStorage.setItem('BCWEvents', JSON.stringify(eventList));
+    }
+    function loadEvents() {
+        var eventList = localStorage.getItem('BCWEvents');
+        if (eventList) {
+            eventList = JSON.parse(eventList)
+        } else {
+            eventList = defaultEventList;
+        }
+        return eventList;
+    }
 
 
-
-    var eventList = [
+    var defaultEventList = [
         {
             "title": "Dinner at Guido\'s",
             "place": "${Guido address}",
             "start": moment('2016-10-07'), //fix formatting
-            "owner": 'luke.skywalker@lightside.jed',
+            "owner": 'anakin.skywalker@darkside.sth',
             "description": "Come have dinner with BCW!",
             "filled": false,
             "reservable": false,

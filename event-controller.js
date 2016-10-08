@@ -1,22 +1,25 @@
 function EventController(theCalendar, eventService) {
 
 
-    ///Add events
-    // $(((((form))))).on('submit', function createEvent(title, owner, type, timeA, timeB, place, description, filled, reservable) {
-    //     event.preventDefault();
-    //     var form = event.target;
-    //     //get elements from input form and pass them in in order
-    //     //owner comes from email of user
-    //     eventService.addEvent(title, owner, type, timeA, timeB, place, description, filled, reservable);
-    // })
+    //Add events
+    $(((((form))))).on('submit', function createEvent(title, owner, type, timeA, timeB, place, description, filled, reservable) {
+        event.preventDefault();
+        var form = event.target;
+        //get elements from input form and pass them in in order
+        var owner = "luke.skywalker@lightside.jed";
+        eventService.addEvent(title, owner, type, timeA, timeB, place, description, filled, reservable);
+        eventService.saveEvents();
+    })
 
     update(eventService.getEvents())
 
-    function update(arr){
+    function update(arr, currentUser){
         // Renders each event in the arr
         arr.forEach(function(event){
-            event.editable = true
-            theCalendar.fullCalendar('renderEvent', event)
+            if (authenticate(event, currentUser)){
+                event.editable = true
+            }
+            theCalendar.fullCalendar('renderEvent', event, stick)
         })
     }
 
@@ -32,6 +35,7 @@ function EventController(theCalendar, eventService) {
 
             SOMETHING.fullCalendar('updateEvent', event)
         }
+        eventService.saveEvents();
     }
 
 
@@ -41,6 +45,7 @@ function EventController(theCalendar, eventService) {
         if (authenticate(event, currentUser)) {
             $('#calendar').fullCalendar('removeEvents', id)
         }
+        eventService.saveEvents();
     }
 
 
