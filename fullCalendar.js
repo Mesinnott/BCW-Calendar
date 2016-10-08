@@ -15,7 +15,7 @@ $(document).ready(function() {
             month: 'Month',
             week:'Week',
             day:'Day',
-            list: 'This Weeks Tasks'
+            list: 'This Week\'s Tasks'
         }
         
     })
