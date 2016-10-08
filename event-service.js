@@ -22,6 +22,16 @@ function EventService() {
             this.reservable = reservable
     }
 
+    ///FIND EVENTS///
+    this.findEventById = function(id) {
+        for (var i = 0; i<eventList.length; i++) {
+            if (eventList[i].id == id) {
+                return eventList[i];
+            }
+        }
+    }
+
+
     ///ADD EVENT///
     this.addEvent = function () {
         //to be called by a function in the event controller, 
@@ -37,7 +47,7 @@ function EventService() {
         // filled = 
         // reservable =
         var event = new Event(title, owner, type, timeA, timeB, place, description, id, filled, reservable)
-        EventList.push(event);
+        eventList.push(event);
         idCounter++;
     }
 

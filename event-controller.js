@@ -12,13 +12,14 @@ function EventController() {
     
 
     ///Edit event (need authentication)
-    this.editEvent = function(event, user, ) {
+    this.editEvent = function(id, user) {
+        var event = eventService.findEventById(id);
         if (authenticate(event, user)) {
             //function here
 
 
 
-            //run .fullCalendar('updateEvent') method to render to screen
+            SOMETHING.fullCalendar('updateEvent', event)
         }
     }
 

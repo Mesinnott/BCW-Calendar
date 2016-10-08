@@ -1,4 +1,4 @@
-var EventList = [
+var eventList = [
     {
         "title": "Dinner at Guido\'s",
         "place": "${Guido address}",
