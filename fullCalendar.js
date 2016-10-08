@@ -16,7 +16,13 @@ $(document).ready(function() {
             week:'Week',
             day:'Day',
             list: 'This Week\'s Tasks'
-        }
+        },
+        droppable: true,
+
+        dayClick: function(){
+            alert('YOU PRESSED MY DAY!!!');
+        },
+        
         
     })
 
