@@ -15,26 +15,29 @@
 
 <body>
     <nav class='navbar transparent navbar-fixed-top'> 
-        <div class='container'>
-        <input type="button" onClick="document.getElementById('middle').scrollIntoView();" />
-        <input type="button" onClick="document.getElementById('end').scrollIntoView();" />
-        <button class = 'singInButton'>Sign In</button>
-        <button class = 'eventButton'>New Event</button>
-        <button class = 'calendarButton'>Calendar</button>
+        <div class='container-fluid'>
+            <div class='navbar-header brand'> 
+                <h4 class='bcw'><a href='boisecodeworks.com'>hi</a> Boise Code Works Official Calendar of Awesomeness</h4>
+                </div>
+                <ul class = 'nav navbar-nav navbar-right'>
+                    <li><a href ='#calendar'>Calendar</a></li>
+                    <li><a href ='#logIn'>Log In</a></li>
+                    <li><a href ='#addEvent'>Add Event</a></li>
+                    </ul>
         </div>
         </nav>
 
     
     <div class='container-fluid'>
-        <div class='row titleBar'>
-        
+        <div class='row titleBar'> <!--/this is the background title screen stuff*-->
         </div>
-        <div class='row calendar' id='middle'>
+        <div class='row calendar' id='calendar'>
             <div class='col-xs-1'></div>
-            <div class='col-xs-10' class='calendar' id='calendar'></div>
+            <div class='col-xs-10 calendar' id='calendar'></div>
             <div class='col-xs-1'></div>
         </div>
-        <div id='end'></div>
+        <div id='logIn'></div>
+        <div id='addEvent'></div>
     </div>
     <script src='events.js'></script>
     <script src='event-service.js'></script>
