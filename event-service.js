@@ -6,10 +6,13 @@ function EventService() {
      * dropOff
      * reserve
      */
+    var eventList
+    this.loadEvents = function(){
+        loadEvents()}
 
 
-    this.getEvents = function(){
-        return _eventList;
+    this.getEvents = function () {
+        return eventList;
     }
 
 
@@ -92,22 +95,21 @@ function EventService() {
         localStorage.setItem('BCWEvents', JSON.stringify(eventList));
     }
     function loadEvents() {
-        var eventList = localStorage.getItem('BCWEvents');
+        eventList = localStorage.getItem('BCWEvents');
         if (eventList) {
             eventList = JSON.parse(eventList)
         } else {
             eventList = defaultEventList;
         }
-        var events = eventList.filter(event, function oneMonth() {
+        var events = eventList.filter(function (event) {
             if (moment().diff(event.start, 'days') > 30) {
                 return false;
-            }else{
+            } else {
                 return true;
             }
         })
         return eventList;
     }
-    var _eventList = loadEvents();
 
 
     var defaultEventList = [
@@ -144,4 +146,5 @@ function EventService() {
     ]
 
 
+    var events = loadEvents();
 }

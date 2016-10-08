@@ -8,7 +8,7 @@ function main(){
     }
 
     EventController(theCalendar, app.services.eventService)
-
+debugger
     app.services.eventService.loadEvents();
 }
 main()

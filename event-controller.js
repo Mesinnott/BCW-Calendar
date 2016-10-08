@@ -3,6 +3,7 @@ function EventController(theCalendar, eventService) {
 
     //Add events
     $('.eventForm').on('submit', function createEvent() {
+        debugger
         event.preventDefault();
         var form = event.target;
         //get elements from input form and pass them in in order
@@ -11,15 +12,14 @@ function EventController(theCalendar, eventService) {
         eventService.saveEvents();
     })
 
-    update(eventService.getEvents())
 
-    function update(arr, currentUser){
+    function update(arr, currentUser) {
         // Renders each event in the arr
-        arr.forEach(function(event){
-            if (authenticate(event, currentUser)){
+        arr.forEach(function (event) {
+            if (authenticate(event, currentUser)) {
                 event.editable = true
             }
-            theCalendar.fullCalendar('renderEvent', event, stick)
+            theCalendar.fullCalendar('renderEvent', event, 'stick')
         })
     }
 
@@ -75,11 +75,22 @@ function EventController(theCalendar, eventService) {
         }
     }
 
-    
+
     ///Save button
     /////THIS ELEMENT YET NEEDS TO BE WRITTEN IN HTML
     $('.save-button').on('click', function () {
+        debugger
         eventService.saveEvents();
     })
+
+ ////closes the form field///
+    $('#close').on('click', function () {
+        debugger
+        $('#addEvent').addClass('hidden')
+    })
+
+
+    update(eventService.getEvents())
+
 }
 
