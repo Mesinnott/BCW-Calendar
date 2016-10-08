@@ -75,11 +75,11 @@ function EventController(theCalendar, eventService) {
         }
     }
 
+    
+    ///Save button
+    /////THIS ELEMENT YET NEEDS TO BE WRITTEN IN HTML
+    $('.save-button').on('click', function () {
+        eventService.saveEvents();
+    })
 }
 
-
-//display interaction; listeners, etc.
-
-//authentication (email address matching)
-
-//inputting events
