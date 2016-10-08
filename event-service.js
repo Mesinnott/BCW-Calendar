@@ -1,5 +1,11 @@
 function EventService(){
-// create events
+/**FUNCTIONS TO WRITE:
+ * add
+ * edit
+ * delete
+ * dropOff
+ * reserve
+ */
 
 function Event(owner, type, date, time, place){
     this.owner = owner,
