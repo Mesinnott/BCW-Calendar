@@ -26,9 +26,14 @@ function buildCalendar(){
         // editable: true,
         // theme: true,
 
-        dayClick: function (a,b,c,d,e) {
+        dayClick: function (a,b,c) {
             debugger
-            prompt('event?', 'event')
+            var timeStamp = a._d
+            // document.getElementById('#')
+            $('#addEvent').removeClass('hidden')
+            console.log(a._d)
+            $('#eventTime').val = (a._d)
+            // prompt('event?', 'event')
             // alert('YOU MADE MY DAY!!!');
         }
     })
@@ -36,3 +41,5 @@ function buildCalendar(){
 return theCalendar;
 
 }
+
+

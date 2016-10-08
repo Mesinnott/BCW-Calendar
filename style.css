@@ -87,3 +87,16 @@ height: 300px;
 .clear{
     background-color: rgba(31, 148, 226, 0);
 }
+.darker{
+    background-color: rgba(00,00,00, 0.2);
+}
+ .addEvent{
+    position:fixed;
+    top: 25%;
+    left: 10%;
+    z-index: 9999;
+ }
+.hidden{
+    display:none;
+    z-index: -1;
+}

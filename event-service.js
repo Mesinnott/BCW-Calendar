@@ -9,7 +9,7 @@ function EventService() {
 
 
     this.getEvents = function(){
-        return eventList
+        return loadEvents()
     }
 
 

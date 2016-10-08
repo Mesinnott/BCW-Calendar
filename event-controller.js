@@ -2,7 +2,7 @@ function EventController(theCalendar, eventService) {
 
 
     //Add events
-    $(((((form))))).on('submit', function createEvent(title, owner, type, timeA, timeB, place, description, filled, reservable) {
+    $('.eventForm').on('submit', function createEvent() {
         event.preventDefault();
         var form = event.target;
         //get elements from input form and pass them in in order
