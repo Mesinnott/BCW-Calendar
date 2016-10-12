@@ -39,6 +39,19 @@ function buildCalendar() {
 
         },
 
+        eventClick: function (a, b, c) {
+            debugger
+            var timeStamp = a._d
+
+            // document.getElementById('#')
+            $('#editEvent').removeClass('hidden')
+            console.log(a._d)
+            var timeString = JSON.stringify(timeStamp)
+            // $('#eventTime').val(timeStamp)
+
+
+        },
+
         
 
         // eventClick: function(calEvent, jsEvent, view){
