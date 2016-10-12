@@ -9,11 +9,13 @@ function EventService() {
     var eventList
 
 
-    this.loadEvents = function(){
-        loadEvents()}
+    this.loadEvents = function () {
+        loadEvents()
+    }
 
-this.saveEvents = function(){
-        saveEvents()}
+    this.saveEvents = function () {
+        saveEvents()
+    }
 
 
     this.getEvents = function () {
@@ -22,9 +24,9 @@ this.saveEvents = function(){
     }
 
 
-    this.random = function() {
-    var idCounter= Math.floor(Math.random()*1000000) 
-    return idCounter
+    this.random = function () {
+        var idCounter = Math.floor(Math.random() * 1000000)
+        return idCounter
     }
 
 
@@ -53,7 +55,7 @@ this.saveEvents = function(){
     }
 
 
-    
+
 
 
     ///ADD EVENT///
@@ -67,7 +69,7 @@ this.saveEvents = function(){
         // end =
         // place =
         // description = 
-        var id= this.random();
+        var id = this.random();
         // var id = idCounter;
         // filled = 
         // reservable =

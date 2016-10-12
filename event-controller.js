@@ -10,34 +10,35 @@ function EventController(theCalendar, eventService) {
         var owner = "luke.skywalker@lightside.jed";
         var title = $('#eventTitle').val()
 
-        if($('#formType').val()=='Meet Ups and Pubs'){
+        if ($('#formType').val() == 'Meet Ups and Pubs') {
             var type = 1
-        }else if($('#formType').val()=='TA Adventure Time'){
+        } else if ($('#formType').val() == 'TA Adventure Time') {
             var type = 2
-        }else if ($('#formType').val()=="'Study' Groups"){
+        } else if ($('#formType').val() == "'Study' Groups") {
             var type = 3
-        }else if ($('#formType').val()=="Call me Maybe?"){
-            var type = 4}
-        
+        } else if ($('#formType').val() == "Call me Maybe?") {
+            var type = 4
+        }
+
         var timeA = $('#eventTime').val()
         var timeB = 4
         var place = $('#eventLocation').val()
         var description = $('#eventDescription').val()
         var filled = false
         console.log($('#eventPrivacy'))
-        if($('#eventPrivacy')[0].checked == true){
+        if ($('#eventPrivacy')[0].checked == true) {
             var reservable = true
-        } if($('#eventPrivacy')[0].checked == false){
+        } if ($('#eventPrivacy')[0].checked == false) {
             var reservable = false
         }
 
         // if($('#eventPrivacy').val()){
         // var reservable = true}
-        
+
 
         eventService.addEvent(title, owner, type, timeA, timeB, place, description, filled, reservable);
         eventService.saveEvents();
-         
+
         $('#addEvent').addClass('hidden')
 
         location.reload()
@@ -53,7 +54,7 @@ function EventController(theCalendar, eventService) {
             }
             theCalendar.fullCalendar('renderEvent', event, 'stick')
         })
-        
+
     }
 
 
@@ -116,7 +117,7 @@ function EventController(theCalendar, eventService) {
         eventService.saveEvents();
     })
 
- ////closes the form field///
+    ////closes the form field///
     $('#close').on('click', function () {
         $('#addEvent').addClass('hidden')
     })

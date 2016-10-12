@@ -1,4 +1,4 @@
-function buildCalendar(){
+function buildCalendar() {
 
     var theCalendar = $('#calendar').fullCalendar({
         // put your options and callbacks here
@@ -19,42 +19,42 @@ function buildCalendar(){
         },
         droppable: true,
         draggable: true,
-        eventDrop: function(e,delta,revert){
+        eventDrop: function (e, delta, revert) {
             debugger
-            
+
         },
         editable: true,
         // theme: true,
 
-        dayClick: function (a,b,c) {
+        dayClick: function (a, b, c) {
             debugger
             var timeStamp = a._d
-            
+
             // document.getElementById('#')
             $('#addEvent').removeClass('hidden')
             console.log(a._d)
-            var timeString= JSON.stringify(timeStamp)
+            var timeString = JSON.stringify(timeStamp)
             $('#eventTime').val(timeStamp)
-         
+
 
         },
 
-    //      eventClick: function(calEvent, jsEvent, view) {
-    // $('#calendar').fullCalendar('removeEvents', function (event) {
-    //     return event == calEvent;
-    // });
-// }             ***************This will delete one event.  BUT, still not saving on refresh**************
+        //      eventClick: function(calEvent, jsEvent, view) {
+        // $('#calendar').fullCalendar('removeEvents', function (event) {
+        //     return event == calEvent;
+        // });
+        // }             ***************This will delete one event.  BUT, still not saving on refresh**************
 
-    
-        
-    
+
+
+
 
 
 
 
     })
 
-return theCalendar;
+    return theCalendar;
 
 }
 

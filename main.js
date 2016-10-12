@@ -1,4 +1,4 @@
-function main(){
+function main() {
     var currentUser = "luke.skywalker@lightside.jed"
     var theCalendar = buildCalendar();
     var app = {
@@ -8,7 +8,7 @@ function main(){
     }
 
     EventController(theCalendar, app.services.eventService)
-debugger
+    debugger
     app.services.eventService.loadEvents();
 }
 main()
