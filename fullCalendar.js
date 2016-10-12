@@ -32,6 +32,7 @@ function buildCalendar() {
 
             // document.getElementById('#')
             $('#addEvent').removeClass('hidden')
+            debugger
             console.log(a._d)
             var timeString = JSON.stringify(timeStamp)
             $('#eventTime').val(timeStamp)
@@ -41,12 +42,12 @@ function buildCalendar() {
 
         eventClick: function (a, b, c) {
             debugger
-            var timeStamp = a._d
+            // var timeStamp = a._d
 
             // document.getElementById('#')
             $('#editEvent').removeClass('hidden')
-            console.log(a._d)
-            var timeString = JSON.stringify(timeStamp)
+            // console.log(a._d)
+            // var timeString = JSON.stringify(timeStamp)
             // $('#eventTime').val(timeStamp)
 
 

@@ -94,7 +94,7 @@ function EventController(theCalendar, eventService) {
     ///Reserve spot at event
 
 
-
+    
 
 
 
