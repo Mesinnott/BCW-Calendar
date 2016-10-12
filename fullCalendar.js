@@ -19,6 +19,7 @@ function buildCalendar() {
         },
         droppable: true,
         draggable: true,
+        resizing: true,
         eventDrop: function (e, delta, revert) {
             debugger
 
@@ -42,6 +43,16 @@ function buildCalendar() {
 
         eventClick: function (a, b, c) {
             debugger
+            var title = a.title
+            var place = a.place
+            var description = a.description
+            $('#eventEditTitle').val(title)
+            $('#eventEditPlace').val(place)
+            $('#eventEditDescription').val(description)
+
+
+            console.log(a.title)
+            console.log(title)
             // var timeStamp = a._d
 
             // document.getElementById('#')

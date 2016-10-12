@@ -61,6 +61,10 @@ function EventController(theCalendar, eventService) {
 
     ///Edit event (need authentication)
     this.editEvent = function (id, currentUser) {
+        // var location = 
+
+
+
         var event = eventService.findEventById(id);
         if (authenticate(event, currentUser)) {
             //function here
