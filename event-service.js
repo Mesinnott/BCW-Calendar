@@ -86,7 +86,6 @@ this.saveEvents = function(){
 
 
 
-
     ///reserve events
     this.reserveEvent = function (event) {
 
