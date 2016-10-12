@@ -38,12 +38,16 @@ function buildCalendar(){
          
 
         },
+            // eventClick: function(calEvent, jsEvent, view){
 
-    //      eventClick: function(calEvent, jsEvent, view) {
-    // $('#calendar').fullCalendar('removeEvents', function (event) {
-    //     return event == calEvent;
-    // });
-// }             ***************This will delete one event.  BUT, still not saving on refresh**************
+            // }
+
+//          eventClick: function(calEvent, jsEvent, view) {
+//     $('#calendar').fullCalendar('removeEvents', function (event) {
+//         return event == calEvent;
+//     });
+// }             
+// ***************This will delete one event.  BUT, still not saving on refresh**************
 
     
         
