@@ -88,7 +88,6 @@ function EventService() {
 
 
 
-
     ///reserve events
     this.reserveEvent = function (event) {
 
