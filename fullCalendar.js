@@ -37,8 +37,6 @@ function buildCalendar() {
             console.log(a._d)
             var timeString = JSON.stringify(timeStamp)
             $('#eventTime').val(timeStamp)
-
-
         },
 
         eventClick: function (a, b, c) {
@@ -46,6 +44,9 @@ function buildCalendar() {
             var title = a.title
             var place = a.place
             var description = a.description
+            $('#eventViewTitle').html(title)
+            $('#eventViewPlace').html(place)
+            $('#eventViewDescription').html(description)
             $('#eventEditTitle').val(title)
             $('#eventEditPlace').val(place)
             $('#eventEditDescription').val(description)
@@ -56,7 +57,7 @@ function buildCalendar() {
             // var timeStamp = a._d
 
             // document.getElementById('#')
-            $('#editEvent').removeClass('hidden')
+            $('#viewEvent').removeClass('hidden')
             // console.log(a._d)
             // var timeString = JSON.stringify(timeStamp)
             // $('#eventTime').val(timeStamp)

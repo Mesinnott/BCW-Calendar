@@ -124,6 +124,22 @@ function EventController(theCalendar, eventService) {
     ////closes the form field///
     $('#close').on('click', function () {
         $('#addEvent').addClass('hidden')
+        // $('#editEvent').addClass('hidden')
+    })
+
+    $('#closeEdit').on('click', function () {
+        // $('#addEvent').addClass('hidden')
+        $('#editEvent').addClass('hidden')
+    })
+
+     $('#closeView').on('click', function () {
+        // $('#addEvent').addClass('hidden')
+        $('#viewEvent').addClass('hidden')
+    })
+
+    $('#editView').on('click', function(){
+    $('#viewEvent').addClass('hidden')
+    $('#editEvent').removeClass('hidden')
     })
 
 

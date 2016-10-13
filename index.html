@@ -33,40 +33,83 @@
 	</nav>
 
 
-    <div class='container-fluid'>
-        <div class='row titleBar'>
-        </div>
-        <div class='row'>
-            <div class='col-xs-1 clear'></div>
-            <div class='col-xs-10 calendar' id='calendar'></div>
-            <div class='col-xs-1 clear'></div>
-        </div>
-        <div id='logIn'>
-            <div class='hidden addEvent' id='editEvent'>
-                <div class="row formRow">
-                    <form class='eventForm col-xs-10 col-xs-offset-1'>
-                        <div class='form-inline'>
-                            <div class='form-group'>
-                                <label for="eventTitle">Event Title</label>
-                                <input type='text' required class='form-control' id='eventEditTitle' name='eventTitle' placeholder=${this.title}>
-                            </div>
-                            <div class='form-group'>
-                                <label for="eventTime">When We Doing This?</label>
-                                <input type='text' required class='form-control' id='eventEditTime' name='eventTime' placeholder=${this.start}>
-                            </div>
-                            <div class='form-group'>
-                                <label for="eventLocation">Where We Doing This?</label>
-                                <input type='text' required class='form-control' id='eventEditPlace' placeholder=${this.place}>
-                            </div>
-                        </div>
-                        <div class='form-group'>
-                            <label for="eventDescription">What We Doing?</label>
-                            <textarea class='form-control' required rows='3' id='eventEditDescription' placeholder=${this.description}></textarea>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+	<div class='container-fluid'>
+		<div class='row titleBar'>
+		</div>
+		<div class='row'>
+			<div class='col-xs-1 clear'></div>
+			<div class='col-xs-10 calendar' id='calendar'></div>
+			<div class='col-xs-1 clear'></div>
+		</div>
+		<div id='logIn'>
+			<div class='hidden addEvent' id='editEvent'>
+				<div class="row formRow">
+					<form class='eventForm col-xs-10 col-xs-offset-1'>
+						<div class='form-inline'>
+							<div class='form-group'>
+								<label for="eventTitle">Event Title</label>
+								<input type='text' required class='form-control' id='eventEditTitle' name='eventTitle' placeholder=${this.title}>
+							</div>
+							<div class='form-group'>
+								<label for="eventTime">When We Doing This?</label>
+								<input type='text' required class='form-control' id='eventEditTime' name='eventTime' placeholder=${this.start}>
+							</div>
+							<div class='form-group'>
+								<label for="eventLocation">Where We Doing This?</label>
+								<input type='text' required class='form-control' id='eventEditPlace' placeholder=${this.place}>
+							</div>
+						</div>
+						<div class='form-group'>
+							<label for="eventDescription">What We Doing?</label>
+							<textarea class='form-control' required rows='3' id='eventEditDescription' placeholder=${this.description}></textarea>
+							<button type='button' id='closeEdit' class='btn btn-primary closeForm'>X close X</button>
+							<button type='button' id='saveEdit' class='btn btn-danger closeForm'>Save Changes</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class='hidden viewEvent' id='viewEvent'>
+			<!--<div class="row formRow">-->
+			<div class='eventView col-xs-10 col-xs-offset-1'>
+				<!--<div class='form-inline'>-->
+				<!--<div class='form-group'>-->
+				<div>
+					<h4>Title:</h4>
+					<h5 class='beta' id='eventViewTitle'></h5>
+				</div>
+				<!--<input type='text' required class='form-control' id='eventViewTitle' name='eventTitle' placeholder=${this.title}>-->
+				<!--</div>-->
+				<div>
+					<h4>Time:</h4>
+					<h5 class='beta' id='eventViewTime'></h5>
+				</div>
+				<div>
+					<h4>Location:</h4>
+					<h5 class='beta' id='eventViewPlace'></h5>
+				</div>
+				<div>
+					<h4>Description:</h4>
+					<h5 class='beta' id='eventViewDescription'></h5>
+				</div>
+				<!--<textarea class='form-control' required rows='3' id='eventViewDescription' placeholder=${this.description}></textarea>-->
+				<button type='button' id='closeView' class='btn btn-danger closeForm'>X close X</button>
+				<button type='button' id='editView' class='btn btn-primary closeForm'>Edit</button>
+				<!--</div>-->
+			</div>
+			<!--</div>-->
+		</div>
+
+
+
+
+
+
+
+
+
+
 
 
 		<div class='hidden addEvent' id='addEvent'>
