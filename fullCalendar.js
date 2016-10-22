@@ -26,17 +26,19 @@ function buildCalendar() {
         },
         editable: true,
         // theme: true,
+        timezone: 'America/Denver',
 
-        dayClick: function (eventMoment, mouseEvent, monthConstructor) {
+        dayClick: function (date, jsEvent, calendarView) {
             debugger;
-            var timeStamp = eventMoment._d;
+            console.log(date);
+            var timeStamp = date._d;
             // document.getElementById('#')
             $('#addEvent').removeClass('hidden');
             var timeString = JSON.stringify(timeStamp);
             $('#eventTime').val(timeStamp)
         },
 
-        eventClick: function (scheduledEvent, mouseEvent, monthConstructor) {
+        eventClick: function (scheduledEvent, jsEvent, calendarView) {
             debugger;
             var title = scheduledEvent.title;
             var place = scheduledEvent.place;
