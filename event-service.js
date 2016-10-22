@@ -6,7 +6,7 @@ function EventService() {
      * dropOff
      * reserve
      */
-    var eventList
+    var eventList;
 
 
     this.loadEvents = function () {
@@ -17,31 +17,50 @@ function EventService() {
         saveEvents()
     }
 
-
     this.getEvents = function () {
         return eventList;
-
     }
 
-
-    this.random = function () {
+    this.randomId = function () {
         var idCounter = Math.floor(Math.random() * 1000000)
         return idCounter
     }
 
-
     ///CONSTRUCTOR///
-    function Event(title, owner, type, timeA, timeB, place, description, id, filled, reservable) {
-        this.title = title
-        this.owner = main.currentUser,
-            this.type = type,
-            this.start = timeA,
-            this.end = timeB,
-            this.place = place,
-            this.description = "",
-            this.id = id,
-            this.filled = filled,
-            this.reservable = reservable
+    function Event(plan) {
+        this.title = plan.title;
+        this.owner = main.currentUser;
+        this.type = plan.type;
+        this.start = plan.timeA;
+        this.end = plan.timeB;
+        this.place = plan.place;
+        this.description = plan.description || "";
+        this.id = plan.id;
+        this.filled = plan.filled;
+        this.reservable = plan.reservable
+    }
+
+    ///ADD EVENT///
+    this.addEvent = function (title, owner, type, timeA, timeB, place, description, reservable, filled) {
+        var id = this.randomId();
+        var filled;
+        if (!reservable) {
+            filled = false;
+        }
+        var plan = {
+            title: title,
+            owner: owner,
+            type: type,
+            timeA: timeA,
+            timeB: timeB,
+            place: place,
+            description: description,
+            reservable: reservable,
+            filled: filled,
+            id: id
+        }
+        var event = new Event(plan)
+        eventList.push(event);
     }
 
     ///FIND EVENTS///
@@ -52,30 +71,6 @@ function EventService() {
                 return eventList[i];
             }
         }
-    }
-
-
-
-
-
-    ///ADD EVENT///
-    this.addEvent = function (title, owner, type, timeA, timeB, place, description, id, filled, reservable) {
-        //to be called by a function in the event controller, 
-        //all information passed in from there.
-        // title = 
-        // owner =
-        // type =
-        // start =
-        // end =
-        // place =
-        // description = 
-        var id = this.random();
-        // var id = idCounter;
-        // filled = 
-        // reservable =
-        var event = new Event(title, owner, type, timeA, timeB, place, description, id, filled, reservable)
-        eventList.push(event);
-        // idCounter++;
     }
 
     ///EDIT EVENT///
@@ -126,7 +121,6 @@ function EventService() {
         return eventList;
     }
 
-
     var defaultEventList = [
         {
             "title": "Dinner at Guido\'s",
@@ -148,16 +142,6 @@ function EventService() {
             "reservable": false,
             "type": "meetup"
         }
-        // {
-        // id
-        // time 
-        // place 
-        // filled (boolean)
-        // description
-        // owner
-        // reservable (boolean)
-        // type (use as class)
-        // }
     ]
 
 
