@@ -21,7 +21,7 @@ function EventController(theCalendar, eventService) {
         }
 
         var timeA = $('#eventTime').val()
-        var timeB = timeA.add(2,'h')
+        var timeB = 
         var place = $('#eventLocation').val()
         var description = $('#eventDescription').val()
         var filled = false
