@@ -36,11 +36,11 @@ function buildCalendar() {
             $('#eventTime').val(timeStamp)
         },
 
-        eventClick: function (a, b, c) {
+        eventClick: function (scheduledEvent, mouseEvent, monthConstructor) {
             debugger;
-            var title = a.title;
-            var place = a.place;
-            var description = a.description;
+            var title = scheduledEvent.title;
+            var place = scheduledEvent.place;
+            var description = scheduledEvent.description;
             $('#eventViewTitle').html(title);
             $('#eventViewPlace').html(place);
             $('#eventViewDescription').html(description);
@@ -48,7 +48,7 @@ function buildCalendar() {
             $('#eventEditPlace').val(place);
             $('#eventEditDescription').val(description);
 
-            console.log(a.title);
+            console.log(scheduledEvent.title);
             console.log(title);
             
             $('#viewEvent').removeClass('hidden')
