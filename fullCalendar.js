@@ -27,42 +27,31 @@ function buildCalendar() {
         editable: true,
         // theme: true,
 
-        dayClick: function (a, b, c) {
-            debugger
-            var timeStamp = a._d
-
+        dayClick: function (eventMoment, mouseEvent, monthConstructor) {
+            debugger;
+            var timeStamp = eventMoment._d;
             // document.getElementById('#')
-            $('#addEvent').removeClass('hidden')
-            debugger
-            console.log(a._d)
-            var timeString = JSON.stringify(timeStamp)
+            $('#addEvent').removeClass('hidden');
+            var timeString = JSON.stringify(timeStamp);
             $('#eventTime').val(timeStamp)
         },
 
         eventClick: function (a, b, c) {
-            debugger
-            var title = a.title
-            var place = a.place
-            var description = a.description
-            $('#eventViewTitle').html(title)
-            $('#eventViewPlace').html(place)
-            $('#eventViewDescription').html(description)
-            $('#eventEditTitle').val(title)
-            $('#eventEditPlace').val(place)
-            $('#eventEditDescription').val(description)
+            debugger;
+            var title = a.title;
+            var place = a.place;
+            var description = a.description;
+            $('#eventViewTitle').html(title);
+            $('#eventViewPlace').html(place);
+            $('#eventViewDescription').html(description);
+            $('#eventEditTitle').val(title);
+            $('#eventEditPlace').val(place);
+            $('#eventEditDescription').val(description);
 
-
-            console.log(a.title)
-            console.log(title)
-            // var timeStamp = a._d
-
-            // document.getElementById('#')
+            console.log(a.title);
+            console.log(title);
+            
             $('#viewEvent').removeClass('hidden')
-            // console.log(a._d)
-            // var timeString = JSON.stringify(timeStamp)
-            // $('#eventTime').val(timeStamp)
-
-
         },
 
         
